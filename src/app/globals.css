@@ -8,10 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  --color-maroon-500: #240000;
+  --color-primary: #8b1c3d;
+  --color-secondary: #b84c69;
 }
 
 @media (prefers-color-scheme: dark) {

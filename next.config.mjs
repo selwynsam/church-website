@@ -4,7 +4,7 @@ const nextConfig = {
   // Optional: Change the output directory `out` -> `dist`
   distDir: "dist",
 
-  basePath: "/church-website",
+  basePath: process.env.NODE_ENV === "production" ? "/church-website" : "",
 
   images: {
     unoptimized: true,
