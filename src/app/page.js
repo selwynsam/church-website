@@ -23,10 +23,10 @@ const Hero = () => (
     </div>
 
     <div className="relative z-10 container mx-auto px-4 text-center">
-      <h1 className="mb-6 text-5xl font-bold text-white md:text-6xl">
+      <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
         {siteInfo.nameVasco}
       </h1>
-      <p className="mx-auto mb-8 max-w-2xl text-xl text-white">
+      <p className="mx-auto mb-8 max-w-2xl text-lg text-white">
         {siteInfo.pastor}
       </p>
 
@@ -40,10 +40,10 @@ const Hero = () => (
               <Icon name="time-line" className="ri-lg text-primary" />
             </div>
             <div>
-              <h3 className="mb-1 font-semibold text-white">
+              <h3 className="mb-1 text-sm font-semibold text-white">
                 {services.sundayService.title}
               </h3>
-              <p className="text-lg font-bold text-white">
+              <p className="text-base font-bold text-white">
                 {services.sundayService.time}
               </p>
             </div>
@@ -59,8 +59,10 @@ const Hero = () => (
               <Icon name="map-pin-line" className="ri-lg text-primary" />
             </div>
             <div>
-              <h3 className="mb-1 font-semibold text-white">Location</h3>
-              <p className="text-lg font-bold text-white">
+              <h3 className="mb-1 text-sm font-semibold text-white">
+                Location
+              </h3>
+              <p className="text-base font-bold text-white">
                 {siteInfo.addressShort}
               </p>
             </div>
