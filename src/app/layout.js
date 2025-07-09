@@ -24,9 +24,9 @@ const pacifico = Pacifico({
 });
 
 export const metadata = {
-  title: "Wesley Methodist Church",
+  title: "Wesley Methodist Church Vasco",
   description:
-    "Welcome to Wesley Methodist Church. Led by Pastor Michael Anderson. Join us for worship, fellowship, and community service.",
+    "Welcome to Wesley Methodist Church Vasco. Join us for worship, fellowship, and community service.",
 };
 
 export const viewport = {

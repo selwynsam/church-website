@@ -8,6 +8,7 @@ const Button = ({
   onClick,
   className = "",
   type = "button",
+  target = "_self",
 }) => {
   const baseClasses =
     "font-medium px-6 py-3 rounded-lg transition-colors inline-flex items-center justify-center";
@@ -22,7 +23,7 @@ const Button = ({
       <a
         href={href}
         className={classes}
-        target="_blank"
+        target={target}
         rel="noopener noreferrer"
       >
         {children}

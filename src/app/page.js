@@ -31,7 +31,10 @@ const Hero = () => (
       </p>
 
       <div className="mb-8 flex flex-col items-center justify-center gap-6 md:flex-row">
-        <div className="border-primary transform rounded-lg border-l-4 bg-white/30 px-8 py-6 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105">
+        <a
+          href="#services"
+          className="border-primary transform rounded-lg border-l-4 bg-white/30 px-8 py-6 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105"
+        >
           <div className="flex items-center gap-4">
             <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-full">
               <Icon name="time-line" className="ri-lg text-primary" />
@@ -45,9 +48,12 @@ const Hero = () => (
               </p>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div className="border-primary transform rounded-lg border-l-4 bg-white/30 px-8 py-6 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105">
+        <a
+          href="#location"
+          className="border-primary transform rounded-lg border-l-4 bg-white/30 px-8 py-6 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105"
+        >
           <div className="flex items-center gap-4">
             <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-full">
               <Icon name="map-pin-line" className="ri-lg text-primary" />
@@ -59,7 +65,7 @@ const Hero = () => (
               </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <Button href="#services">Join Us This Sunday</Button>
@@ -112,6 +118,7 @@ const Location = () => (
             <Button
               href={siteInfo.directionsUrl}
               className="inline-flex items-center"
+              target="_blank"
             >
               <Icon name="direction-line" className="ri-sm mr-2" />
               <span>Get Directions</span>
