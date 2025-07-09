@@ -33,7 +33,7 @@ const Hero = () => (
       <div className="mb-8 flex flex-col items-center justify-center gap-6 md:flex-row">
         <a
           href="#services"
-          className="border-primary transform rounded-lg border-l-4 bg-white/30 px-8 py-6 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105"
+          className="border-primary transform rounded-lg border-l-4 bg-white/30 px-4 py-3 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105 md:px-8 md:py-6"
         >
           <div className="flex items-center gap-4">
             <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-full">
@@ -43,7 +43,7 @@ const Hero = () => (
               <h3 className="mb-1 text-sm font-semibold text-white">
                 {services.sundayService.title}
               </h3>
-              <p className="text-base font-bold text-white">
+              <p className="text-sm font-bold text-white md:text-base">
                 {services.sundayService.time}
               </p>
             </div>
@@ -52,7 +52,7 @@ const Hero = () => (
 
         <a
           href="#location"
-          className="border-primary transform rounded-lg border-l-4 bg-white/30 px-8 py-6 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105"
+          className="border-primary transform rounded-lg border-l-4 bg-white/30 px-4 py-3 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105 md:px-8 md:py-6"
         >
           <div className="flex items-center gap-4">
             <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-full">
@@ -62,7 +62,7 @@ const Hero = () => (
               <h3 className="mb-1 text-sm font-semibold text-white">
                 Location
               </h3>
-              <p className="text-base font-bold text-white">
+              <p className="text-sm font-bold text-white md:text-base">
                 {siteInfo.addressShort}
               </p>
             </div>
@@ -79,8 +79,10 @@ const Services = () => (
   <section id="services" className="bg-gray-50 py-20">
     <div className="container mx-auto px-4">
       <div className="mb-12 text-center">
-        <h2 className="mb-4 text-4xl font-bold text-gray-800">Service Times</h2>
-        <p className="mx-auto max-w-2xl text-gray-600">
+        <h2 className="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
+          Service Times
+        </h2>
+        <p className="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
           Join us for worship and fellowship. All are welcome to our services.
         </p>
       </div>
@@ -101,12 +103,14 @@ const Location = () => (
   <section id="location" className="py-20">
     <div className="container mx-auto px-4">
       <div className="mb-12 text-center">
-        <h2 className="mb-4 text-4xl font-bold text-gray-400">Find Us</h2>
+        <h2 className="mb-4 text-3xl font-bold text-gray-400 md:text-4xl">
+          Find Us
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
         <div className="rounded bg-white p-8 shadow-md">
-          <h3 className="mb-6 text-2xl font-semibold text-gray-800">
+          <h3 className="mb-6 text-xl font-semibold text-gray-800 md:text-2xl">
             Our Location
           </h3>
 
@@ -149,12 +153,18 @@ const About = () => (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <div>
-          <h2 className="mb-6 text-4xl font-bold text-gray-800">
+          <h2 className="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">
             {about.title}
           </h2>
-          <p className="mb-4 text-gray-600">{about.description1}</p>
-          <p className="mb-4 text-gray-600">{about.description2}</p>
-          <p className="mb-6 text-gray-600">{about.description3}</p>
+          <p className="mb-4 text-base text-gray-600 md:text-lg">
+            {about.description1}
+          </p>
+          <p className="mb-4 text-base text-gray-600 md:text-lg">
+            {about.description2}
+          </p>
+          <p className="mb-6 text-base text-gray-600 md:text-lg">
+            {about.description3}
+          </p>
 
           <div className="flex flex-wrap gap-4">
             <Button href="#services">Our Services</Button>
@@ -229,8 +239,10 @@ const Contact = () => {
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-gray-400">Contact Us</h2>
-          <p className="mx-auto max-w-2xl text-gray-400">
+          <h2 className="mb-4 text-3xl font-bold text-gray-400 md:text-4xl">
+            Contact Us
+          </h2>
+          <p className="mx-auto max-w-2xl text-base text-gray-400 md:text-lg">
             Have questions or need prayer? Reach out to us and we&apos;ll get
             back to you as soon as possible.
           </p>
@@ -239,7 +251,7 @@ const Contact = () => {
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <div className="rounded bg-white p-8 shadow-md">
-              <h3 className="mb-6 text-2xl font-semibold text-gray-800">
+              <h3 className="mb-6 text-xl font-semibold text-gray-800 md:text-2xl">
                 Get in Touch
               </h3>
 
@@ -262,7 +274,7 @@ const Contact = () => {
               className="rounded bg-white p-8 shadow-md"
               onSubmit={handleSubmit}
             >
-              <h3 className="mb-6 text-2xl font-semibold text-gray-800">
+              <h3 className="mb-6 text-xl font-semibold text-gray-800 md:text-2xl">
                 Send a Message
               </h3>
 

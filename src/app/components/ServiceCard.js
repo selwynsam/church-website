@@ -6,11 +6,15 @@ const ServiceCard = ({ icon, title, description, time }) => (
     <div className="bg-primary/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
       <Icon name={icon} className="ri-xl text-primary" />
     </div>
-    <h3 className="mb-2 text-center text-2xl font-semibold text-gray-800">
+    <h3 className="mb-2 text-center text-xl font-semibold text-gray-800 md:text-2xl">
       {title}
     </h3>
-    <p className="mb-4 text-center text-gray-600">{description}</p>
-    <p className="text-primary text-center text-xl font-bold">{time}</p>
+    <p className="mb-4 text-center text-sm text-gray-600 md:text-base">
+      {description}
+    </p>
+    <p className="text-primary text-center text-lg font-bold md:text-xl">
+      {time}
+    </p>
   </div>
 );
 

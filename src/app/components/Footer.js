@@ -78,7 +78,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="mb-4 text-xl font-semibold">Contact Info</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               <li className="flex items-start text-gray-400">
                 <Icon name="map-pin-line" className="ri-lg mt-1 mr-2" />
                 <a href="#location">
