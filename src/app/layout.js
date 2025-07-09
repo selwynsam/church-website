@@ -1,5 +1,6 @@
 // app/layout.js
 import { Lora, Open_Sans, Pacifico } from "next/font/google";
+import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "remixicon/fonts/remixicon.css";
@@ -33,11 +34,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/* Google Analytics */}
-      <script
-        async
+      <Script
+        strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-85GMZSTS1K"
-      ></script>
-      <script
+      />
+      <Script
+        id="google-analytics-init"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -49,7 +52,9 @@ export default function RootLayout({ children }) {
       />
 
       {/* Microsoft Clarity */}
-      <script
+      <Script
+        id="microsoft-clarity-init"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

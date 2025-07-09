@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import Icon from "./Icon";
+import Image from "next/image";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,7 +20,13 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <div className="flex items-center">
           {/* Replace with actual church logo */}
-          <img src="/next.svg" alt="Church Logo" className="mr-2 h-8 w-8" />
+          <Image
+            src="/next.svg"
+            alt="Church Logo"
+            width={32}
+            height={32}
+            className="mr-2"
+          />
           <div className="font-display text-1xl text-primary">
             Wesley Methodist Church
           </div>

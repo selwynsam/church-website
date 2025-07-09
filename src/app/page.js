@@ -3,11 +3,12 @@
 
 import { Send } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 import Button from "./components/Button";
 import Icon from "./components/Icon";
 import ServiceCard from "./components/ServiceCard";
 import ContactInfo from "./components/ContactInfo";
-import SocialLink from "./components/SocialLink";
+// import SocialLink from "./components/SocialLink";
 import FormField from "./components/FormField";
 import { siteInfo, services, about, contact } from "../constants/siteInfo";
 
@@ -155,6 +156,7 @@ const About = () => (
         </div>
 
         <div className="overflow-hidden rounded-lg shadow-md">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={about.imageUrl}
             alt={about.imageAlt}
@@ -220,8 +222,8 @@ const Contact = () => {
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-400">Contact Us</h2>
           <p className="mx-auto max-w-2xl text-gray-400">
-            Have questions or need prayer? Reach out to us and we'll get back to
-            you as soon as possible.
+            Have questions or need prayer? Reach out to us and we&apos;ll get
+            back to you as soon as possible.
           </p>
         </div>
 
