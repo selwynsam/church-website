@@ -4,6 +4,11 @@ export const siteInfo = {
   name: "Wesley Methodist Church",
   nameVasco: "Wesley Methodist Church Vasco",
   pastor: "Led by Pastor Pradeep Kumar",
+  description:
+    "Welcome to Wesley Methodist Church Vasco. Join us for worship, fellowship, and community service.",
+  keywords:
+    "church, Vasco, Goa, worship, community, Methodist, spiritual growth, Sunday service, prayer, fellowship",
+  url: "https://www.wesleymethodistchurchvasco.org", // Replace with your actual website URL
   address: "Belmira Plaza, opp. Laxmi Petrol pump, Mundvel",
   addressLine2: "Mormugao, New Vaddem, Goa 403802",
   addressShort: "Belmira Plaza, opp. Laxmi Petrol pump, Vasco, Goa",

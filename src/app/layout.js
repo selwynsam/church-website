@@ -23,10 +23,34 @@ const pacifico = Pacifico({
   variable: "--font-pacifico",
 });
 
+import { siteInfo } from "../../constants/siteInfo";
+
 export const metadata = {
-  title: "Wesley Methodist Church Vasco",
-  description:
-    "Welcome to Wesley Methodist Church Vasco. Join us for worship, fellowship, and community service.",
+  title: siteInfo.nameVasco,
+  description: siteInfo.description,
+  keywords: siteInfo.keywords,
+  openGraph: {
+    title: siteInfo.nameVasco,
+    description: siteInfo.description,
+    url: siteInfo.url,
+    siteName: siteInfo.name,
+    images: [
+      {
+        url: `${siteInfo.url}/background.jpg`,
+        width: 1200,
+        height: 630,
+        alt: siteInfo.nameVasco,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteInfo.nameVasco,
+    description: siteInfo.description,
+    images: [`${siteInfo.url}/background.jpg`],
+  },
 };
 
 export const viewport = {
@@ -65,6 +89,42 @@ export default function RootLayout({ children }) {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "sc76n3iidj");
           `,
+        }}
+      />
+
+      {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "${siteInfo.nameVasco}",
+            "url": "${siteInfo.url}",
+            "logo": "${siteInfo.url}/next.svg", // Assuming next.svg is your logo
+            "description": "${siteInfo.description}",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "${siteInfo.address}",
+              "addressLocality": "Mormugao",
+              "addressRegion": "Goa",
+              "postalCode": "403802",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "${siteInfo.phone}",
+              "contactType": "customer service"
+            },
+            "sameAs": [
+              // Add social media links here if available in siteInfo.js
+              // "${siteInfo.socialLinks.facebook}",
+              // "${siteInfo.socialLinks.twitter}",
+              // "${siteInfo.socialLinks.instagram}"
+            ]
+          }
+        `,
         }}
       />
 
