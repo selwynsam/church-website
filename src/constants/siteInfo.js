@@ -7,7 +7,7 @@ export const siteInfo = {
   description:
     "Welcome to Wesley Methodist Church Vasco. Join us for worship, fellowship, and community service.",
   keywords:
-    "church, Vasco, Goa, worship, community, Methodist, spiritual growth, Sunday service, prayer, fellowship",
+    "church, Vasco, Goa, worship, community, Methodist, Protestant Church, spiritual growth, Sunday service, prayer, fellowship",
   url: "https://www.wmcv.in",
   address: "Belmira Plaza, opp. Laxmi Petrol pump, Mundvel",
   addressLine2: "Mormugao, New Vaddem, Goa 403802",
