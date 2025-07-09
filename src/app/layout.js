@@ -27,7 +27,11 @@ export const metadata = {
   title: "Wesley Methodist Church",
   description:
     "Welcome to Wesley Methodist Church. Led by Pastor Michael Anderson. Join us for worship, fellowship, and community service.",
-  viewport: "width=device-width, initial-scale=1.0",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: "1.0",
 };
 
 export default function RootLayout({ children }) {
