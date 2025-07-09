@@ -23,7 +23,7 @@ const pacifico = Pacifico({
   variable: "--font-pacifico",
 });
 
-import { siteInfo } from "../../constants/siteInfo";
+import { siteInfo } from "../constants/siteInfo";
 
 export const metadata = {
   title: siteInfo.nameVasco,
@@ -61,73 +61,71 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Google Analytics */}
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-85GMZSTS1K"
-      />
-      <Script
-        id="google-analytics-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-85GMZSTS1K');
+      <head>
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-85GMZSTS1K"
+        />
+        <Script
+          id="google-analytics-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-85GMZSTS1K');
+            `,
+          }}
+        />
+
+        {/* Microsoft Clarity */}
+        <Script
+          id="microsoft-clarity-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "sc76n3iidj");
+            `,
+          }}
+        />
+
+        {/* JSON-LD Schema Markup */}
+        <Script
+          id="json-ld-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "${siteInfo.nameVasco}",
+              "url": "${siteInfo.url}",
+              "logo": "${siteInfo.url}/next.svg", // Assuming next.svg is your logo
+              "description": "${siteInfo.description}",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "${siteInfo.address}",
+                "addressLocality": "Mormugao",
+                "addressRegion": "Goa",
+                "postalCode": "403802",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "${siteInfo.phone}",
+                "contactType": "customer service"
+              },
+              "sameAs": []
+            }
           `,
-        }}
-      />
-
-      {/* Microsoft Clarity */}
-      <Script
-        id="microsoft-clarity-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "sc76n3iidj");
-          `,
-        }}
-      />
-
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "${siteInfo.nameVasco}",
-            "url": "${siteInfo.url}",
-            "logo": "${siteInfo.url}/next.svg", // Assuming next.svg is your logo
-            "description": "${siteInfo.description}",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "${siteInfo.address}",
-              "addressLocality": "Mormugao",
-              "addressRegion": "Goa",
-              "postalCode": "403802",
-              "addressCountry": "IN"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "${siteInfo.phone}",
-              "contactType": "customer service"
-            },
-            "sameAs": [
-              // Add social media links here if available in siteInfo.js
-              // "${siteInfo.socialLinks.facebook}",
-              // "${siteInfo.socialLinks.twitter}",
-              // "${siteInfo.socialLinks.instagram}"
-            ]
-          }
-        `,
-        }}
-      />
-
+          }}
+        />
+      </head>
       <body
         className={`${lora.variable} ${openSans.variable} ${pacifico.variable} min-h-screen bg-white font-sans`}
       >
