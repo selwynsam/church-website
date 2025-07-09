@@ -67,6 +67,7 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-85GMZSTS1K"
         />
+        <meta name="description" content={siteInfo.description} />
         <Script
           id="google-analytics-init"
           strategy="afterInteractive"
