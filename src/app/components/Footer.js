@@ -87,10 +87,14 @@ const Footer = () => {
                   {siteInfo.addressLine2}
                 </a>
               </li>
-              <li className="flex items-center text-gray-400">
-                <Icon name="phone-line" className="ri-lg mr-2" />
-                <a href={`tel:${siteInfo.phone}`}>{siteInfo.phone}</a>
-              </li>
+
+              {siteInfo.phone && (
+                <li className="flex items-center text-gray-400">
+                  <Icon name="phone-line" className="ri-lg mr-2" />
+                  <a href={`tel:${siteInfo.phone}`}>{siteInfo.phone}</a>
+                </li>
+              )}
+
               <li className="flex items-center text-gray-400">
                 <Icon name="mail-line" className="ri-lg mr-2" />
                 <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a>

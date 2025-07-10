@@ -18,7 +18,7 @@ const Hero = () => (
     id="home"
     className="relative flex h-[600px] w-full items-center justify-center overflow-hidden"
   >
-    <div className="absolute inset-0 h-full w-full bg-[url(/background.jpg)] bg-cover bg-center bg-no-repeat">
+    <div className="absolute inset-0 h-full w-full bg-[url(/background2.jpeg)] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-black/70"></div>
     </div>
 
@@ -255,9 +255,11 @@ const Contact = () => {
                 Get in Touch
               </h3>
 
-              <ContactInfo icon="phone-line" title="Phone">
-                <a href={`tel:${contact.phone}`}>{contact.phone}</a>
-              </ContactInfo>
+              {contact.phone && (
+                <ContactInfo icon="phone-line" title="Phone">
+                  <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+                </ContactInfo>
+              )}
 
               <ContactInfo icon="mail-line" title="Email">
                 <a href={`mailto:${contact.email}`}>{contact.email}</a>

@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import { siteInfo } from "@/constants/siteInfo";
 import Icon from "./Icon";
 import Image from "next/image";
 
@@ -21,14 +22,13 @@ const Header = () => {
         <div className="flex items-center">
           {/* Replace with actual church logo */}
           <Image
-            src="/next.svg"
+            src={siteInfo.logoUrl}
             alt="Church Logo"
             width={32}
             height={32}
-            className="mr-2"
           />
-          <div className="font-display text-1xl text-primary">
-            Wesley Methodist Church
+          <div className="font-display text-primary text-sm">
+            Wesley Methodist Church Vasco
           </div>
         </div>
         <nav className="hidden space-x-8 md:flex">

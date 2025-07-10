@@ -36,7 +36,7 @@ export const metadata = {
     siteName: siteInfo.name,
     images: [
       {
-        url: `${siteInfo.url}/background.jpg`,
+        url: `${siteInfo.url}/background2.jpg`,
         width: 1200,
         height: 630,
         alt: siteInfo.nameVasco,
@@ -49,7 +49,7 @@ export const metadata = {
     card: "summary_large_image",
     title: siteInfo.nameVasco,
     description: siteInfo.description,
-    images: [`${siteInfo.url}/background.jpg`],
+    images: [`${siteInfo.url}/background2.jpg`],
   },
 };
 
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               "name": "${siteInfo.nameVasco}",
               "url": "${siteInfo.url}",
-              "logo": "${siteInfo.url}/next.svg", // Assuming next.svg is your logo
+              "logo": "${siteInfo.url}${siteInfo.logoUrl}",
               "description": "${siteInfo.description}",
               "address": {
                 "@type": "PostalAddress",
